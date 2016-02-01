@@ -1,0 +1,15 @@
+@mixin background-gradient($color-first, $color-last, $number-items) {
+    @for $li from 1 through $number-items {
+    	&:nth-child(#{$li}) { 
+    		$total: 100 / $number-items * $li;
+    		background: mix($color-first, $color-last, $total);
+    	}
+    }
+}
+
+@mixin color-text {
+	$red: random(256)-1;
+	$green: random(256)-1;
+	$blue: random(256)-1;
+	color: rgb($red, $green, $blue);
+}

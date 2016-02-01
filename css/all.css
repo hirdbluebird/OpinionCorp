@@ -1,0 +1,133 @@
+/* line 1, ../sass/_main.scss */
+body {
+  text-align: center;
+}
+
+/*********************** gradient list ***************************/
+/* line 8, ../sass/_main.scss */
+.gradient-list {
+  padding: 0px;
+}
+/* line 10, ../sass/_main.scss */
+.gradient-list li {
+  padding: 10px 20px;
+  list-style: none;
+}
+/* line 3, ../sass/_mixins.scss */
+.gradient-list li:nth-child(1) {
+  background: #f3ddb6;
+}
+/* line 3, ../sass/_mixins.scss */
+.gradient-list li:nth-child(2) {
+  background: #e7ddc2;
+}
+/* line 3, ../sass/_mixins.scss */
+.gradient-list li:nth-child(3) {
+  background: #dbddce;
+}
+/* line 3, ../sass/_mixins.scss */
+.gradient-list li:nth-child(4) {
+  background: #cedddb;
+}
+/* line 3, ../sass/_mixins.scss */
+.gradient-list li:nth-child(5) {
+  background: #c2dde7;
+}
+/* line 3, ../sass/_mixins.scss */
+.gradient-list li:nth-child(6) {
+  background: #b6ddf3;
+}
+/* line 3, ../sass/_mixins.scss */
+.gradient-list li:nth-child(7) {
+  background: #aaddff;
+}
+
+/*************************** circles ***************************/
+@keyframes first-iteration {
+  0% {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+  }
+  50% {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+  }
+}
+/* line 36, ../sass/_main.scss */
+.circle-container {
+  text-align: center;
+}
+/* line 38, ../sass/_main.scss */
+.circle-container div {
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #000;
+  width: 300px;
+  height: 300px;
+  animation-name: first-iteration;
+  animation-duration: 2s;
+}
+/* line 46, ../sass/_main.scss */
+.circle-container div:nth-child(2) {
+  animation-delay: 2s;
+}
+/* line 49, ../sass/_main.scss */
+.circle-container div:last-child {
+  animation-delay: 4s;
+}
+
+/*************************** color-text ***************************/
+/* line 57, ../sass/_main.scss */
+h1 span {
+  animation-name: color-iteration;
+  animation-duration: 1s;
+}
+/* line 60, ../sass/_main.scss */
+h1 span:nth-child(2) {
+  animation-delay: 1s;
+}
+/* line 63, ../sass/_main.scss */
+h1 span:nth-child(3) {
+  animation-delay: 2s;
+}
+/* line 66, ../sass/_main.scss */
+h1 span:last-child {
+  animation-delay: 3s;
+}
+
+@keyframes color-iteration {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: #1ae3e7;
+  }
+  100% {
+    color: inherit;
+  }
+}
+/*************************** stripped table ***************************/
+/* line 86, ../sass/_main.scss */
+table {
+  margin: auto;
+  color: white;
+}
+/* line 89, ../sass/_main.scss */
+table tr {
+  background: grey;
+}
+/* line 91, ../sass/_main.scss */
+table tr td {
+  padding: 10px;
+}
+/* line 95, ../sass/_main.scss */
+table tr:nth-child(odd) {
+  background: black;
+}

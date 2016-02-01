@@ -1,0 +1,98 @@
+body {
+	text-align: center;
+}
+
+
+/*********************** gradient list ***************************/
+
+.gradient-list {
+	padding: 0px;
+	li {
+		padding: 10px 20px;
+	    list-style: none;
+	    @include background-gradient( #adf, #fda, 7);
+	}
+}
+
+/*************************** circles ***************************/
+
+@keyframes first-iteration {
+  0% {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+  }
+  50% {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+  }
+}
+.circle-container {
+	text-align: center;
+	div {
+		display: inline-block;
+		border-radius: 50%;
+		border: 3px solid #000;
+		width: 300px;
+		height: 300px;
+		animation-name: first-iteration;
+		animation-duration: 2s;
+		&:nth-child(2) {
+  			animation-delay: 2s;
+  		}
+		&:last-child {
+  			animation-delay: 4s;
+  		}
+	}
+}
+
+/*************************** color-text ***************************/
+
+h1 span {
+	animation-name: color-iteration;
+	animation-duration: 1s;
+	&:nth-child(2) {
+		animation-delay: 1s;
+	}
+	&:nth-child(3) {
+		animation-delay: 2s;
+	}
+	&:last-child {
+		animation-delay: 3s;
+	}
+}
+@keyframes color-iteration {
+  0% {
+  	color: inherit;
+  }
+  50% {
+    @include color-text;
+  }
+  100% {
+    color: inherit;
+  }
+}
+
+
+
+/*************************** stripped table ***************************/
+
+table {
+	margin: auto;
+	color: white;
+	tr {
+		background: grey;
+		td {
+			padding: 10px;
+		}
+	}
+	tr:nth-child(odd) {
+		background: black;
+	}
+}
